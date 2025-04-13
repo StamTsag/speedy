@@ -20,6 +20,12 @@ public class Result {
     @Column(nullable = false)
     private int downloadMbps;
 
+    @Column(nullable = false)
+    private String country;
+
+    @Column(nullable = false)
+    private String server;
+
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
@@ -55,6 +61,22 @@ public class Result {
 
     public void setLatency(int latencyMs) {
         this.latencyMs = latencyMs;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getServer() {
+        return server;
+    }
+
+    public void setServer(String server) {
+        this.server = server;
     }
 
     public LocalDateTime getCreatedAt() {
